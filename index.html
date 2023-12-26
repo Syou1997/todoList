@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website summary">
+    <meta name="author" content="Syou Zhang">
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    <title>To Do List</title>
+    <!-- font-awesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <!-- 背景圖片 -->
+    <img class="bcg_img" src="./image/bcg.jpg" alt="background_image">
+    <!-- 事情做完後出現的圖片 -->
+    <div class="good_img">
+        <img src="./image/Good.png" alt="Good">
+    </div>
+
+    <!-- 標題 -->
+    <h1>的代辦事項</h1>
+    <!-- 新增代辦事項區 -->
+    <div class="add_area">
+        <input class="input_info" type="text" placeholder="請輸入代辦事項">
+        <input class="input_datetime" type="datetime-local" title="請選擇開始時間">
+        <!-- 新增按鈕 -->
+        <i title="新增" class="fas fa-plus-square icon_add"></i>
+    </div>
+    <div class="title_area">
+        <h2>未完成事項</h2>
+        <h2>已完成事項</h2>
+    </div>
+    <main>
+        <!-- 未完成區域 -->
+        <div class="undone_area">
+            <!-- <div class="text_frame">
+                <p class="text">吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克</p>
+                <p class="time">12/19 12:00</p>
+                <button class="check_btn" type="button">
+                    <i class="fa-solid fa-circle-check icon"></i>
+                </button>
+
+                <button class="trash_btn" type="button">
+                    <i class="fa-solid fa-trash icon"></i>
+                </button>
+            </div> -->
+
+        </div>
+        <!-- 已完成區域 -->
+        <div class="done_area">
+            <!-- <div class="text_frame">
+                <p class="text">吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克吃午飯 吃大麥克</p>
+                <p class="time">12/19 12:00</p>
+
+                <button class="trash_btn" type="button">
+                    <i class="fa-solid fa-trash icon"></i>
+                </button>
+            </div> -->
+        </div>
+    </main>
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
