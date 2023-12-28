@@ -309,10 +309,7 @@ main {
         .add_area {
 
 
-            input {
-                
-
-            }
+            input {}
 
         }
 
@@ -392,7 +389,7 @@ main {
                 padding: 0;
 
                 .text_frame {
-    
+
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -435,12 +432,13 @@ main {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 
 
     body {
 
         overflow-y: auto;
+
         h1 {
             font-size: 1.2rem;
         }
@@ -448,9 +446,16 @@ main {
         .add_area {
 
             input {
-            
+                min-width: 100px;
+            }
+
+            .input_info {
+
+    
 
             }
+
+            .input_datetime {}
 
         }
 
@@ -467,25 +472,34 @@ main {
 
 
 
-            .undone_area {  
-     
-              
+            .undone_area {
+                padding: 0;
+
+
+                .text_frame {
+    
+
 
                     .text {
-    
+                        font-size: 0.8rem;
+                        padding: 0.4rem;
                     }
 
                     .time {
 
-
+                        font-size: 0.8rem;
+                        padding: 0.4rem;
+                        min-width: 3rem;
+                    }
 
                     .check_btn {
 
 
 
 
-                        .icon {
 
+                        .icon {
+          
 
                         }
 
@@ -493,12 +507,16 @@ main {
 
                     .trash_btn {
 
+                        padding: 0.2rem;
+
+                        cursor: pointer;
 
 
 
 
                         .icon {
-        
+                            color: white;
+                            font-size: 1.2rem;
                         }
 
                     }
@@ -508,33 +526,33 @@ main {
             }
 
             .done_area {
-             
+                padding: 0;
 
                 .text_frame {
 
+ 
 
 
                     .text {
-             
+                        font-size: 0.7rem;
+                        padding: 0.4rem;
                     }
 
                     .time {
 
-                 
+                        font-size: 0.8rem;
+                        padding: 0.4rem;
+                        min-width: 3rem;
                     }
 
 
                     .trash_btn2 {
 
-                 
-
-             
-
 
 
 
                         .icon {
-                      
+  
                         }
 
                     }

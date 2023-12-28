@@ -292,14 +292,49 @@ main .done_area .remove {
     font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   body {
     overflow-y: auto;
   }
   body h1 {
     font-size: 1.2rem;
   }
+  body .add_area input {
+    min-width: 100px;
+  }
   body .title_area h2 {
     font-size: 1.2rem;
+  }
+  body main .undone_area {
+    padding: 0;
+  }
+  body main .undone_area .text_frame .text {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+  body main .undone_area .text_frame .time {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    min-width: 3rem;
+  }
+  body main .undone_area .text_frame .trash_btn {
+    padding: 0.2rem;
+    cursor: pointer;
+  }
+  body main .undone_area .text_frame .trash_btn .icon {
+    color: white;
+    font-size: 1.2rem;
+  }
+  body main .done_area {
+    padding: 0;
+  }
+  body main .done_area .text_frame .text {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+  body main .done_area .text_frame .time {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    min-width: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
