@@ -125,13 +125,26 @@ function render2(length) {
             trashIcon.classList.add("fa-trash");
             trashIcon.classList.add("icon");
 
+            //製作取消完成的按鈕然後加上class和type
+            let cancelBtn = document.createElement("button");
+            cancelBtn.classList.add("cancel_btn");
+            cancelBtn.setAttribute("type", "button");
+            //加上取消的Icon
+            let cancelIcon = document.createElement("i");
+            cancelIcon.classList.add("fa-solid");
+            cancelIcon.classList.add("fa-rotate-left");
+            cancelIcon.classList.add("icon");
+
             //將icon放入button
             trashBtn.appendChild(trashIcon);
+            cancelBtn.appendChild(cancelIcon);
 
             //把製作的所有丟到class名為text_frame的div裡面
             newDiv.appendChild(pText);
             newDiv.appendChild(pTime);
+            newDiv.appendChild(cancelBtn);
             newDiv.appendChild(trashBtn);
+
 
             //再把容器丟入done_area 未完成區域的div裡面
             done_areaEl.appendChild(newDiv);
@@ -266,7 +279,7 @@ addButton.addEventListener("click", (e) => {
             // render(undownArr.length);
             // render2(downArr.length);
 
-            setTimeout(window.location.reload(),6500);
+            setTimeout(window.location.reload(), 6500);
 
 
 
@@ -453,7 +466,7 @@ checkBtnEl.forEach((check) => {
         const deleteText = e.target.parentElement.parentElement.childNodes[0].innerText;
         const deleteDateTime = e.target.parentElement.parentElement.childNodes[1].innerText
 
-       
+
         // //判斷要刪除的項目和時間
         undownArr = JSON.parse(localStorage.getItem("undownArr"));
         let newUndownArr = [];
@@ -479,7 +492,7 @@ checkBtnEl.forEach((check) => {
 
         // render(undownArr.length);
         // render2(downArr.length);
-        setTimeout(window.location.reload(),6500);
+        setTimeout(window.location.reload(), 6500);
 
 
 
@@ -528,3 +541,42 @@ trashBtn2El.forEach((trash) => {
 
 
 });
+
+//點擊取消按鈕
+const cancelBtn = document.querySelectorAll(".cancel_btn");
+cancelBtn.forEach((cancel) => {
+    cancel.addEventListener("click", (e) => {
+        //抓出刪除的內容
+        const deleteText = e.target.parentElement.parentElement.childNodes[0].innerText;
+        const deleteDateTime = e.target.parentElement.parentElement.childNodes[1].innerText
+        console.log(deleteText);
+        console.log(deleteDateTime);
+
+        // //判斷要刪除的項目和時間
+        downArr = JSON.parse(localStorage.getItem("downArr"));
+        let newDownArr = [];
+        undownArr = JSON.parse(localStorage.getItem("undownArr"));
+       
+       
+        downArr.forEach((item) => {
+            if (item.text === deleteText && item.dateTime === deleteDateTime) {
+                // //將取消的項目丟到未完成的Array
+                undownArr.push(item);
+
+            } else {
+                newDownArr.push(item);
+
+            }
+        })
+
+        downArr = newDownArr;
+
+        //將完成與未完成的陣列存回Storage後渲染
+        localStorage.setItem("undownArr", JSON.stringify(undownArr));
+        localStorage.setItem("downArr", JSON.stringify(downArr));
+
+        window.location.reload();
+
+
+    })
+})
