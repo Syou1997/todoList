@@ -556,8 +556,8 @@ cancelBtn.forEach((cancel) => {
         downArr = JSON.parse(localStorage.getItem("downArr"));
         let newDownArr = [];
         undownArr = JSON.parse(localStorage.getItem("undownArr"));
-       
-       
+
+
         downArr.forEach((item) => {
             if (item.text === deleteText && item.dateTime === deleteDateTime) {
                 // //將取消的項目丟到未完成的Array
@@ -579,4 +579,21 @@ cancelBtn.forEach((cancel) => {
 
 
     })
+})
+
+//變更使用這名稱
+const changeNameEl = document.getElementById("changeName")
+changeNameEl.addEventListener("click", () => {
+
+    let yes = confirm("您確定要變更使用者名稱嗎？");
+    if (yes) {
+        let newName = prompt("請輸入新的使用者名稱");
+        localStorage.setItem("userName", newName);
+        window.location.reload();
+    } else {
+        alert("已取消");
+    }
+    
+
+
 })

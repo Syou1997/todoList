@@ -30,10 +30,27 @@
      object-fit: contain;
 }
 
-h1 {
+.top_area {
+  position: relative;
+}
+.top_area h1 {
   text-align: center;
   margin: 1rem 0;
   font-size: 1.5rem;
+}
+.top_area .changeNameBtn {
+  text-align: center;
+  font-size: 1.5rem;
+  display: block;
+  margin: auto 0;
+  cursor: pointer;
+}
+.top_area .changeNameBtn:hover {
+  transform: scale(1.1);
+  color: #1781fa;
+}
+.top_area .changeNameBtn:active {
+  transform: scale(1);
 }
 
 .add_area {

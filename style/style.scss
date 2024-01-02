@@ -32,11 +32,36 @@
 
 }
 
-h1 {
-    text-align: center;
-    margin: 1rem 0;
-    font-size: 1.5rem;
+.top_area {
+    position: relative;
+
+    h1 {
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+
+    }
+
+    .changeNameBtn {
+        text-align: center;
+        font-size: 1.5rem;
+        display: block;
+        margin: auto 0;
+        cursor: pointer;
+        // transition: all 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            color: #1781fa;
+
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
 }
+
 
 .add_area {
 
@@ -245,6 +270,7 @@ main {
                 }
 
             }
+
             .cancel_btn {
                 background-color: rgb(38, 74, 233);
                 margin-right: 0.5rem;
@@ -447,6 +473,7 @@ main {
                         }
 
                     }
+
                     .cancel_btn {
 
                         padding: 0.2rem;
@@ -488,11 +515,7 @@ main {
                 min-width: 100px;
             }
 
-            .input_info {
-
-    
-
-            }
+            .input_info {}
 
             .input_datetime {}
 
@@ -516,7 +539,7 @@ main {
 
 
                 .text_frame {
-    
+
 
 
                     .text {
@@ -537,10 +560,7 @@ main {
 
 
 
-                        .icon {
-          
-
-                        }
+                        .icon {}
 
                     }
 
@@ -569,7 +589,7 @@ main {
 
                 .text_frame {
 
- 
+
 
 
                     .text {
@@ -590,9 +610,7 @@ main {
 
 
 
-                        .icon {
-  
-                        }
+                        .icon {}
 
                     }
 
