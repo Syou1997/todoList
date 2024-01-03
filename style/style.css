@@ -287,6 +287,7 @@ main .done_area .remove {
   }
   body main .undone_area {
     padding: 0;
+    margin-right: 0.5rem;
   }
   body main .undone_area .text_frame {
     display: flex;
@@ -321,6 +322,7 @@ main .done_area .remove {
   }
   body main .done_area {
     padding: 0;
+    margin-left: 0.5rem;
   }
   body main .done_area .text_frame {
     display: flex;
@@ -353,21 +355,22 @@ main .done_area .remove {
     font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   body {
     overflow-y: auto;
   }
   body h1 {
     font-size: 1.2rem;
   }
-  body .add_area input {
-    min-width: 100px;
+  body .add_area .input_area input {
+    width: 100%;
   }
   body .title_area h2 {
     font-size: 1.2rem;
   }
   body main .undone_area {
     padding: 0;
+    margin-right: 0.5rem;
   }
   body main .undone_area .text_frame .text {
     font-size: 0.8rem;
@@ -388,6 +391,7 @@ main .done_area .remove {
   }
   body main .done_area {
     padding: 0;
+    margin-left: 0.5rem;
   }
   body main .done_area .text_frame .text {
     font-size: 0.7rem;
