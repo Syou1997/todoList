@@ -588,6 +588,11 @@ changeNameEl.addEventListener("click", () => {
     let yes = confirm("您確定要變更使用者名稱嗎？");
     if (yes) {
         let newName = prompt("請輸入新的使用者名稱");
+
+        console.log(newName);
+        while (newName === "" || newName === "null" || newName === null) {
+            newName = prompt("請輸入新的使用者名稱");
+        }
         localStorage.setItem("userName", newName);
         window.location.reload();
     } else {
