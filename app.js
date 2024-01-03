@@ -26,7 +26,7 @@ throwUndownArr();
 function render(length) {
     if (undownArr.length > 0) {
         for (i = 0; i < undownArr.length; i++) {
-            //抓出未完成區域的擷點
+            //抓出未完成區域的截點
             let undone_areaEl = document.querySelector(".undone_area");
             //製作新的容器標籤然後加上class
             let newDiv = document.createElement("div");
@@ -581,7 +581,7 @@ cancelBtn.forEach((cancel) => {
     })
 })
 
-//變更使用這名稱
+//變更使用者名稱
 const changeNameEl = document.getElementById("changeName")
 changeNameEl.addEventListener("click", () => {
 
@@ -598,7 +598,43 @@ changeNameEl.addEventListener("click", () => {
     } else {
         alert("已取消");
     }
-    
 
+
+
+})
+
+
+
+//將日期改成用輸入的方法
+const swichBtn = document.querySelector(".swich_icon");
+//控制日期的顯示型態的變數
+let isShow = true;
+swichBtn.addEventListener("click", () => {
+    if (isShow) {
+        //1.刪除原本的輸入框
+        const inputDatetime = document.querySelector(".input_datetime");
+        inputDatetime.remove();
+        //2.建立新的輸入框
+        //抓出新增區域的截點
+        const inputArea = document.querySelector(".input_area");
+        let newInput = document.createElement("input");
+        newInput.setAttribute("type", "text")
+        newInput.setAttribute("placeholder", "請手動輸入時間")
+        newInput.classList.add("input_datetime");
+        inputArea.appendChild(newInput);
+        isShow = false;
+    } else {
+        console.log(123);
+        //刪除原本的輸入框
+        const inputDatetime = document.querySelector(".input_datetime");
+        inputDatetime.remove();
+        //抓出新增區域的截點
+        const inputArea = document.querySelector(".input_area");
+        let newInput = document.createElement("input")
+        newInput.setAttribute("type", "datetime-local")
+        newInput.classList.add("input_datetime");
+        inputArea.appendChild(newInput);
+        isShow = true;
+    }
 
 })

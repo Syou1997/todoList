@@ -59,7 +59,6 @@
 }
 .add_area input {
   margin: 1rem 0;
-  margin-right: 1rem;
   padding: 0.5rem;
   min-width: 250px;
   height: 2rem;
@@ -69,6 +68,25 @@
 }
 .add_area .input_info {
   width: 40vw;
+  margin-right: 1rem;
+}
+.add_area .input_datetime {
+  margin-right: 0.3rem;
+}
+.add_area .swich_icon {
+  margin-top: 1.5rem;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.add_area .swich_icon:hover {
+  transform: scale(1.1);
+  color: rgb(7, 76, 223);
+}
+.add_area .swich_icon:active {
+  transform: scale(1);
 }
 .add_area .icon_add {
   margin: 1rem 0;
